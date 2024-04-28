@@ -26,8 +26,15 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+input {
+  transition: all .2s linear
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .centerd {
+    @apply left-center absolute translate-y-center
   }
 }
