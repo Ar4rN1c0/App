@@ -17,23 +17,23 @@ model User {
   createdAt DateTime
   updatedAt DateTime
   chats     Chat[]
-  messages   Message[]
+  messages  Message[]
 }
 
 model Chat {
   id       String    @id @unique @default(uuid())
   title    String
   author   User      @relation(fields: [authorId], references: [id])
-  authorId String    @unique
+  authorId String
   messages Message[]
 }
 
 model Message {
-  id      String @id @unique @default(uuid())
+  id      String   @id @unique @default(uuid())
   content String
-  chat    Chat   @relation(fields: [chatId], references: [id])
-  chatId  String 
-  author  User   @relation(fields: [userId], references: [id])
+  chat    Chat     @relation(fields: [chatId], references: [id])
+  chatId  String
+  author  User     @relation(fields: [userId], references: [id])
   userId  String
   date    DateTime
 }

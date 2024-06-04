@@ -24,7 +24,6 @@ const handler = NextAuth({
                     if(isValidpassword) return { email: user.email, name: user.id, id: user.id }
                     else return null
                 } else return null
-                return null
             }
         })
     ]

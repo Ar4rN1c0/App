@@ -2,10 +2,12 @@
 import { signIn } from "next-auth/react"
 import { FormEvent, useState } from "react"
 import { useRouter } from "next/navigation"
+import Spinner from "../components/Spinner";
 
 export default function LoginPage() {
     const router = useRouter();
     const [error, setError] = useState<string>()
+    const [isSending, setIsSending] = useState<boolean>(false)
     async function login(e: FormEvent<HTMLFormElement>) {
         e.preventDefault()
         const data = new FormData(e.currentTarget)
@@ -21,8 +23,10 @@ export default function LoginPage() {
         }
         else if (Math.floor(res?.status as number / 100) === 5) {
             setError("Internal server error. It is not your fault, we'll be back soon")
+            setIsSending(false)
         } else if (Math.floor(res?.status as number / 100) === 4) {
             setError("Either wrong password or email")
+            setIsSending(false)
         }
     }
 
@@ -34,10 +38,14 @@ export default function LoginPage() {
                     <button onClick={() => setError("")}>&#10006;</button>
                 </div>
             )}
-            <form onSubmit={login} className="flex flex-col gap-4 [&>*]:rounded-md bg-slate-400 p-10 rounded-lg">
+            {isSending && <Spinner></Spinner>}
+            <form onSubmit={(e) =>  {
+                setIsSending(true)
+                login(e)
+            }} className="flex flex-col gap-4 [&>*]:rounded-md bg-slate-400 p-10 rounded-lg">
                 <input className="p-1 color-black bg-slate-800 focus:bg-slate-300 focus:text-black" required type="email" name="email"/>
                 <input className="p-1 color-black bg-slate-800 focus:bg-slate-300 focus:text-black" required type="password" name="password"/>
-                <button className="bg-sky-800 color-white py-2" type="submit">Submit!</button>
+                <button disabled={isSending} className="bg-sky-800 color-white py-2" type="submit">Submit!</button>
             </form>
 
         </main>

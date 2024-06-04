@@ -26,4 +26,5 @@ export default async function getUserInfo() {
         })
         return user
     }
+    else return false
 }

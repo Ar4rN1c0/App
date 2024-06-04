@@ -1,0 +1,23 @@
+.main {
+    position: relative;
+    top: 80px;
+    display: grid;
+    place-content: center;
+    width: 100vw;
+    height: calc(100vh - 80px);
+}
+
+.form {
+    display: grid;
+    place-content: center;
+    padding: 30px;
+    background: rgb(148 163 184);
+    border-radius: 10px;
+    gap: 15px;
+}
+
+.input {
+    border-radius: 6px;
+    padding: 3px 2px;
+    background-color: rgb(30 41 59);
+}
