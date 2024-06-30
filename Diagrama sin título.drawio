@@ -1,9 +1,143 @@
-<mxfile host="app.diagrams.net" modified="2024-06-30T17:29:12.723Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" version="24.6.4" etag="p8zOiGAskACfsolc_l-E" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-30T17:48:15.349Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="x7PEumlwCI0I8rcbTOQO" version="24.6.4" type="github">
   <diagram name="Página-1" id="_s6eomrWAcgXqnaa6Lry">
-    <mxGraphModel>
+    <mxGraphModel dx="1337" dy="814" grid="1" gridSize="13" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="aYcc1scDN941HToaDw6G-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aYcc1scDN941HToaDw6G-1" target="aYcc1scDN941HToaDw6G-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="414" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-1" value="Create NextJS project" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="374" y="60" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aYcc1scDN941HToaDw6G-4" target="aYcc1scDN941HToaDw6G-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-4" value="Install Auth.js and Prisma" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="507" y="60" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aYcc1scDN941HToaDw6G-5" target="aYcc1scDN941HToaDw6G-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-5" value="Set up Supabase project" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="637" y="60" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aYcc1scDN941HToaDw6G-7" target="aYcc1scDN941HToaDw6G-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-7" value="Connect Prisma to Supabase" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="637" y="182" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aYcc1scDN941HToaDw6G-9" target="aYcc1scDN941HToaDw6G-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-9" value="Design pages and authentication routes" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="507" y="182" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aYcc1scDN941HToaDw6G-11" target="aYcc1scDN941HToaDw6G-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-11" value="Install ollama in Vercel Server" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="374" y="182" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aYcc1scDN941HToaDw6G-13" target="aYcc1scDN941HToaDw6G-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-22" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aYcc1scDN941HToaDw6G-21">
+          <mxGeometry x="-0.5026" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="aYcc1scDN941HToaDw6G-13" target="aYcc1scDN941HToaDw6G-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-25" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aYcc1scDN941HToaDw6G-24">
+          <mxGeometry x="-0.2374" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-13" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Is the running cost to high?&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="374" y="299" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aYcc1scDN941HToaDw6G-20" target="aYcc1scDN941HToaDw6G-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-20" value="Implement responses in the app using local Ollama model" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="374" y="414" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aYcc1scDN941HToaDw6G-23" target="aYcc1scDN941HToaDw6G-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-23" value="Design separate server" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="507" y="299" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aYcc1scDN941HToaDw6G-26" target="aYcc1scDN941HToaDw6G-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-26" value="Install Ollama in separate server" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="637" y="299" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aYcc1scDN941HToaDw6G-28" target="aYcc1scDN941HToaDw6G-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-28" value="Create routes and design responses in the server" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="637" y="414" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aYcc1scDN941HToaDw6G-30" target="aYcc1scDN941HToaDw6G-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-30" value="Connect the app to the separate server" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="507" y="414" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aYcc1scDN941HToaDw6G-33" target="aYcc1scDN941HToaDw6G-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-33" value="Save chats and responses to DB" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="442" y="533" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aYcc1scDN941HToaDw6G-39" target="aYcc1scDN941HToaDw6G-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-39" value="Fine tune the model with all IB data available" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="637" y="533" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aYcc1scDN941HToaDw6G-41" target="aYcc1scDN941HToaDw6G-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-41" value="Show the solution to the client" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="637" y="650" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="aYcc1scDN941HToaDw6G-43" target="aYcc1scDN941HToaDw6G-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-47" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aYcc1scDN941HToaDw6G-46">
+          <mxGeometry x="-0.0945" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aYcc1scDN941HToaDw6G-43" target="aYcc1scDN941HToaDw6G-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-43" value="Is the client satisfied?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="637" y="793" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-49" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aYcc1scDN941HToaDw6G-45" target="aYcc1scDN941HToaDw6G-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-45" value="Add styling and adjust the model&#39;s parameters" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="374" y="793" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="aYcc1scDN941HToaDw6G-48" target="aYcc1scDN941HToaDw6G-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-48" value="Add styling and adjust the model&#39;s parameters" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="374" y="650" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aYcc1scDN941HToaDw6G-58" value="Deploy the app." style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="637" y="936" width="80" height="80" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
