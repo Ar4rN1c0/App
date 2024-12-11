@@ -21,7 +21,8 @@ export default async function getUserInfo() {
                         messages: true
                     }
                 },
-                messages: true
+                messages: true,
+                createdAt: true
             }
         })
         return user

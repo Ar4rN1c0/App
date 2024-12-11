@@ -22,7 +22,7 @@ export default function MessagesWindow({ user, chat, messages }: { user: User, c
     }, [])
     return (
         <>
-            <h1>{chat.title}</h1>
+            <h1 className="text-center mt-5 font-bold tracking-wide">{chat.title}</h1>
             <section className={styles.messagesContainer}>
                 <MessageList messages={optimisticMessages} user={user} />
             </section>

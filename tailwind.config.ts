@@ -10,8 +10,8 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "hero": "url('/imagen-hero.webp')"
       },
       animation: {
         'appear': 'appear 0.5s ease-in-out'
@@ -46,8 +46,10 @@ const config: Config = {
       },
       gridTemplateColumns: {
         'chat': '4fr 1fr'
-      }
-      
+      },
+      gridTemplateRows:  {
+        'titlecontent': '1fr 14fr'
+      },
     },
   }
 };
