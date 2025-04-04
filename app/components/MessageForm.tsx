@@ -1,10 +1,9 @@
 import { Chat, User } from "@prisma/client";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useReducer, useRef, useState } from "react";
 import styles from "./messagesDisplay.module.css";
 import publish from "@/Actions/publishMessage";
 import EquationMenu from "./EquationMenu";
 import AddDocumentMenu from "./AddDocumentMenu";
-
 
 type ShowState = {
   showEquations: boolean;
@@ -17,64 +16,85 @@ interface MessageFormProps {
   user: User;
 }
 
+export type ShowAction =
+  | { type: "TOGGLE_EQUATIONS" }
+  | { type: "TOGGLE_DOCUMENTS" };
+
+function showStateReducer(state: ShowState, action: ShowAction): ShowState {
+  switch (action.type) {
+    case "TOGGLE_EQUATIONS":
+      return {
+        showEquations: !state.showEquations,
+        showDocuments: false,
+      };
+    case "TOGGLE_DOCUMENTS":
+      return {
+        showEquations: false,
+        showDocuments: !state.showDocuments,
+      };
+    default:
+      return state;
+  }
+}
+
 export default function MessageForm({ addMessage, chat, user }: MessageFormProps) {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-  const [showState, setShowState] = useState<ShowState>({ showEquations: false, showDocuments: false });
-  const [pdfText, setPdfText] = useState<string>("")
+  const [showState, dispatch] = useReducer(showStateReducer, {
+    showEquations: false,
+    showDocuments: false,
+  });
+  const [pdfText, setPdfText] = useState<string>("");
 
-  const handleSubmit = useCallback(async (formData: FormData) => {
-    if (textareaRef.current) {
-      const message = formData.get("text") as string;
-      if (!message.trim()) return; 
+  const handleSubmit = useCallback(
+    async (formData: FormData) => {
+      if (textareaRef.current) {
+        const message = formData.get("text") as string;
+        if (!message.trim()) return;
 
-      const formattedMessage = message.replaceAll("\n", "<<br/>>");
-      
-      addMessage({
-        content: formattedMessage,
-        userId: user.id,
-        chatId: chat.id,
-        date: new Date(),
-        id: "Provisional",
-      });
+        const formattedMessage = message.replaceAll("\n", "<<br/>>");
 
-      addMessage({
-        content: "",
-        userId: "machinebotid",
-        chatId: chat.id as string,
-        date: new Date(),
-        id: "Provisional Response",
-      });
+        addMessage({
+          content: formattedMessage,
+          userId: user.id,
+          chatId: chat.id,
+          date: new Date(),
+          id: "Provisional",
+        });
 
-      textareaRef.current.value = "";
-      
-      try {
-        await publish(formData);
-      } catch (error) {
-        console.error("Failed to publish message", error);
+        addMessage({
+          content: "",
+          userId: "machinebotid",
+          chatId: chat.id as string,
+          date: new Date(),
+          id: "Provisional Response",
+        });
+
+        textareaRef.current.value = "";
+
+        try {
+          await publish(formData);
+        } catch (error) {
+          console.error("Failed to publish message", error);
+        }
       }
-    }
-  }, [addMessage, chat.id, user.id]);
-
-  useEffect(() => {
-    if (showState.showDocuments && showState.showEquations) {
-      setShowState((prevState) => ({ ...prevState, showDocuments: false }));
-    }
-  }, [showState]);
+    },
+    [addMessage, chat.id, user.id]
+  );
 
   return (
     <article className={styles.formContainer}>
       <button
-        onClick={() => setShowState((prevState) => ({ ...prevState, showDocuments: !prevState.showDocuments }))}
+        onClick={() => dispatch({ type: "TOGGLE_DOCUMENTS" })}
         className={styles.button}
         aria-expanded={showState.showDocuments}
         aria-label="Toggle document menu"
       >
         Add Document
       </button>
-      {showState.showDocuments && <AddDocumentMenu state={{pdfText, setPdfText}} />}
+      {showState.showDocuments && <AddDocumentMenu state={{ pdfText, setPdfText }} />}
 
       <button
-        onClick={() => setShowState((prevState) => ({ ...prevState, showEquations: !prevState.showEquations }))}
+        onClick={() => dispatch({ type: "TOGGLE_EQUATIONS" })}
         className={styles.button}
         aria-expanded={showState.showEquations}
         aria-label="Toggle equation menu"
